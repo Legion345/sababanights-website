@@ -24,7 +24,7 @@ export function Hero() {
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">
               <div className="text-3xl mb-2">📍</div>
-              <h3 className="font-semibold text-gray-900">Community Center</h3>
+              <h3 className="font-semibold text-gray-900">Soho Dance LA</h3>
               <p className="text-gray-600">1618 Cotner Ave Los Angeles, CA 90025</p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">

@@ -4,10 +4,11 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">🕺 Israeli Dancing Night 💃</h3>
+            <h3 className="text-xl font-semibold mb-4">Sababa Nights Mostly Couples Dancing</h3>
             <p className="text-blue-200">
-              Bringing the joy and tradition of Israeli folk dance to our community, 
-              one step at a time.
+              Come to Sababa Nights to make the most of your Israeli Dancing experience!
+              <br/><br/>
+              High energy night, with a mix of classic nostalgia and modern dances that are sure to please everyone!
             </p>
           </div>
           
@@ -24,16 +25,16 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Session Info</h4>
             <div className="text-blue-200 space-y-2">
-              <p>📍 Community Center</p>
-              <p>📅 Every Thursday</p>
-              <p>⏰ 7:30 PM - 10:00 PM</p>
-              <p>💰 $15 per session</p>
+              <p>📍 Soho Dance LA</p>
+              <p>📅 Every Monday</p>
+              <p>⏰ 8:00 PM - 12:00 AM</p>
+              <p>💰 $20 per session</p>
             </div>
           </div>
         </div>
         
         <div className="border-t border-blue-800 mt-8 pt-8 text-center text-blue-200">
-          <p>&copy; 2024 Israeli Dancing Night. Made with ❤️ for our dancing community.</p>
+          <p>&copy; 2026 Sababa Nights Mostly Couples Israeli Dancing. Made with ❤️ for our dancing community.</p>
         </div>
       </div>
     </footer>

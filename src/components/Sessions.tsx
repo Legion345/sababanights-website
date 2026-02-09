@@ -8,7 +8,7 @@ export function Sessions() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-blue-900 mb-4">
-            Dance Sessions 💃🕺
+            Partner Dancing - Session/Teaching Schedule
           </h1>
           <p className="text-xl text-gray-600">
             Join us for exciting Israeli folk dance sessions
@@ -18,9 +18,6 @@ export function Sessions() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sessions.length === 0 ? (
             <div className="col-span-full text-center py-12">
-              <div className="text-6xl mb-4">💃</div>
-              <h3 className="text-xl font-semibold text-gray-600 mb-2">No sessions yet</h3>
-              <p className="text-gray-500">Add the first session to get started!</p>
             </div>
           ) : (
             sessions.map((session) => (
