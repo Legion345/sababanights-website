@@ -1,3 +1,6 @@
+import { Icon } from './Icon';
+import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
+
 export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden">
@@ -5,7 +8,7 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-blue-900 mb-6">
-            Welcome to Israeli Dancing Night! 🕺💃
+            Sababa Nights Mostly Couples Israeli Dancing
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
             Join our vibrant community for an evening of traditional and modern Israeli folk dances. 
@@ -13,18 +16,20 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <div className="text-3xl mb-2">📅</div>
-              <h3 className="font-semibold text-gray-900">Every Thursday</h3>
-              <p className="text-gray-600">7:30 PM - 10:00 PM</p>
+              <div className="mb-2">
+                <Icon icon={faCalendarDays} size="3x" className="text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-gray-900">Every Monday</h3>
+              <p className="text-gray-600">8:00 PM - 12:00 AM</p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">
               <div className="text-3xl mb-2">📍</div>
               <h3 className="font-semibold text-gray-900">Community Center</h3>
-              <p className="text-gray-600">123 Dance Street</p>
+              <p className="text-gray-600">1618 Cotner Ave Los Angeles, CA 90025</p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 text-center">
               <div className="text-3xl mb-2">💰</div>
-              <h3 className="font-semibold text-gray-900">$15 per session</h3>
+              <h3 className="font-semibold text-gray-900">$20 </h3>
               <p className="text-gray-600">First time free!</p>
             </div>
           </div>

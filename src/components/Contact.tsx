@@ -1,36 +1,12 @@
 import { useState } from "react";
-import { toast } from "sonner";
-import { useData } from "../contexts/DataContext";
 
 export function Contact() {
-  const { addContactMessage } = useData();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      addContactMessage(formData);
-      toast.success("Message sent successfully! We'll get back to you soon.");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      toast.error("Failed to send message. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <section id="contact" className="bg-gradient-to-br from-blue-50 to-purple-50 py-16">
@@ -48,7 +24,7 @@ export function Contact() {
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a message</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Your Name
@@ -103,13 +79,28 @@ export function Contact() {
                 />
               </div>
               
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </button>
+              <div className="flex flex-col sm:flex-row gap-3 w-full">
+                <button
+                  type="button"
+                  onClick={() => window.open('https://calendly.com/harelasaraf/sababa-nights', '_blank')}
+                  className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
+                >
+                  Book a Session
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const subject = encodeURIComponent(`Sababa Nights Contact from ${formData.name || 'Visitor'}`);
+                    const body = encodeURIComponent(
+                      `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`
+                    );
+                    window.location.href = `mailto:session@sababanights.com?subject=${subject}&body=${body}`;
+                  }}
+                  className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
+                >
+                  Email Us
+                </button>
+              </div>
             </form>
           </div>
 
@@ -123,9 +114,9 @@ export function Contact() {
                   <div>
                     <h3 className="font-semibold text-gray-900">Location</h3>
                     <p className="text-gray-600">
-                      Community Center<br />
-                      123 Dance Street<br />
-                      Tel Aviv, Israel
+                      Soho Dance LA<br />
+                      1618 Conter Avenue<br />
+                      Los Angeles, CA 90025
                     </p>
                   </div>
                 </div>
@@ -134,7 +125,7 @@ export function Contact() {
                   <div className="text-2xl mr-4">📧</div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">info@israelidancing.com</p>
+                    <p className="text-gray-600">session@sababanights.com</p>
                   </div>
                 </div>
                 
@@ -142,7 +133,7 @@ export function Contact() {
                   <div className="text-2xl mr-4">📱</div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+972-50-123-4567</p>
+                    <p className="text-gray-600">+1 310 569-1326</p>
                   </div>
                 </div>
                 
@@ -151,8 +142,8 @@ export function Contact() {
                   <div>
                     <h3 className="font-semibold text-gray-900">Dance Sessions</h3>
                     <p className="text-gray-600">
-                      Every Thursday<br />
-                      7:30 PM - 10:00 PM
+                      Every Monday<br />
+                      8:00 PM - 12:00 PM
                     </p>
                   </div>
                 </div>
@@ -165,8 +156,8 @@ export function Contact() {
               </h3>
               <p className="text-gray-700 mb-4">
                 Whether you're a complete beginner or an experienced dancer, everyone is welcome 
-                at our Israeli dancing nights. Come as you are and leave with new friends, 
-                new moves, and a big smile!
+                at Sababa Nights Mostly Couples Dancing. Come as you are and leave with new friends, 
+                new choreography, and a big smile!
               </p>
               <div className="bg-blue-50 rounded-lg p-4">
                 <p className="text-sm text-blue-800 font-medium">

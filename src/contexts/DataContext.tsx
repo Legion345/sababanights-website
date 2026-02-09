@@ -1,4 +1,8 @@
 import { createContext, useContext, useState, ReactNode } from "react";
+import harelAsarafImage from "@/assets/images/harel-asaraf.jpg";
+import ashleyAsarafImage from "@/assets/images/ashley-asaraf.jpg";
+import leslieAsarafImage from "@/assets/images/leslie-asaraf.jpg";
+
 
 interface Session {
   id: string;
@@ -62,7 +66,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       location: "Community Center - Studio B",
       description: "Challenge yourself with complex choreographies and partner dances from different regions of Israel.",
       level: "Advanced",
-      instructor: "David Levi",
+      instructor: "Harel Asaraf",
       createdAt: Date.now() - 172800000,
     },
   ]);
@@ -70,18 +74,29 @@ export function DataProvider({ children }: { children: ReactNode }) {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([
     {
       id: "1",
-      name: "Sarah Cohen",
-      role: "Lead Instructor & Founder",
-      bio: "Sarah has been teaching Israeli folk dance for over 15 years. She trained in Tel Aviv and brings authentic techniques and cultural knowledge to every class.",
-      email: "sarah@israelidancing.com",
+      name: "Harel Asaraf",
+      role: "Markid & Lead Instructor",
+      bio: "Our wonderful markid for both Mondays and Thursdays. His parents were/are avid dancers and even met through Israeli Folk Dancing so he grew up in the dancing world. He's been part of dance companies and expanded beyond Israeli dancing, from modern to country line dancing. He's been teaching and running sessions for 12+ years and loves this community.",
+      email: "session@sababanights.com",
+      imageUrl: harelAsarafImage,
     },
     {
       id: "2",
-      name: "David Levi",
-      role: "Advanced Instructor",
-      bio: "David specializes in complex choreographies and regional variations. He's performed with professional dance troupes across Israel and Europe.",
-      email: "david@israelidancing.com",
+      name: "Ashley Asaraf",
+      role: "Instructor & Dancer",
+      bio: "Harel's wife and partner for the Monday couples session. Grew up acting, singing and was trained in tap dancing. She did many sports, but took a break from dancing until she started going country line dancing, where she met Harel. He introduced her to the world of Israeli dancing 5+ years ago and the rest is history.",
+      email: "session@sababanights.com",
+      imageUrl: ashleyAsarafImage,
     },
+    {
+      id: "3",
+      name: "Leslie Asaraf",
+      role: "Instructor & Elder",
+      bio: "Classically trained ballet dancer who has been dancing for over four decades. Partners with her son and daughter in law in running Sababa Nights and will occasionally bring food for the session that is for sure a crowd pleaser.",
+      email: "session@sababanights.com",
+      imageUrl: leslieAsarafImage,
+    },
+
   ]);
 
   const [contactMessages, setContactMessages] = useState<ContactMessage[]>([]);
