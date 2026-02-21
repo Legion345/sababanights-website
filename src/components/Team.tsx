@@ -7,7 +7,7 @@ export function Team() {
     <section id="team" className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-blue-900 mb-4">
+          <h1 className="text-4xl font-bold text-red-900 mb-4">
             Meet Our Team 👥
           </h1>
           <p className="text-xl text-gray-600">
@@ -25,7 +25,7 @@ export function Team() {
           ) : (
             teamMembers.map((member) => (
               <div key={member.id} className="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="aspect-square bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                <div className="aspect-square bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
                   {member.imageUrl ? (
                     <img
                       src={member.imageUrl}
@@ -37,13 +37,13 @@ export function Team() {
                   )}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-blue-900 mb-1">{member.name}</h3>
-                  <p className="text-blue-600 font-medium mb-3">{member.role}</p>
+                  <h3 className="text-xl font-semibold text-red-900 mb-1">{member.name}</h3>
+                  <p className="text-red-600 font-medium mb-3">{member.role}</p>
                   <p className="text-gray-700 text-sm leading-relaxed mb-4">{member.bio}</p>
                   {member.email && (
                     <a
                       href={`mailto:${member.email}`}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm"
+                      className="inline-flex items-center text-red-600 hover:text-red-800 text-sm"
                     >
                       <span className="mr-2">📧</span>
                       Contact

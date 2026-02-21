@@ -14,6 +14,7 @@ export function Navigation() {
   const navItems = [
     { id: "home", label: "Home", icon: "🏠" },
     { id: "sessions", label: "Sessions", icon: "💃" },
+    { id: "shop", label: "Shop", icon: "👕" },
     { id: "team", label: "Meet the Team", icon: "👥" },
     { id: "contact", label: "Contact", icon: "📧" },
   ];
@@ -25,7 +26,7 @@ export function Navigation() {
           <div className="flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-xl sm:text-2xl font-bold text-blue-900 hover:text-blue-700 transition-colors"
+              className="text-xl sm:text-2xl font-bold text-red-900 hover:text-red-700 transition-colors"
             >
               <span className="hidden sm:inline">Sababa Nights Israeli Partner Dancing</span>
               <span className="sm:hidden">Sababa Nights</span>
@@ -35,7 +36,7 @@ export function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors text-gray-600 hover:text-blue-900 hover:bg-blue-50"
+                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors text-gray-600 hover:text-red-900 hover:bg-red-50"
                 >
                   <span>{item.icon}</span>
                   <span>{item.label}</span>
@@ -51,7 +52,7 @@ export function Navigation() {
             {/* Hamburger menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-blue-900 hover:text-blue-700 focus:outline-none focus:text-blue-700"
+              className="md:hidden text-red-900 hover:text-red-700 focus:outline-none focus:text-red-700"
               aria-label="Toggle menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -73,7 +74,7 @@ export function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 hover:text-blue-900 hover:bg-blue-50 w-full text-left"
+                  className="flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-600 hover:text-red-900 hover:bg-red-50 w-full text-left"
                 >
                   <span>{item.icon}</span>
                   <span>{item.label}</span>

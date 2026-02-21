@@ -9,10 +9,10 @@ export function Contact() {
   });
 
   return (
-    <section id="contact" className="bg-gradient-to-br from-blue-50 to-purple-50 py-16">
+    <section id="contact" className="bg-gradient-to-br from-red-50 to-red-100 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-blue-900 mb-4">
+          <h1 className="text-4xl font-bold text-red-900 mb-4">
             Contact Us 📧
           </h1>
           <p className="text-xl text-gray-600">
@@ -33,7 +33,7 @@ export function Contact() {
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   placeholder="Please provide your full name"
                   required
                 />
@@ -47,7 +47,7 @@ export function Contact() {
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   placeholder="What's your e-mail address?"
                   required
                 />
@@ -61,7 +61,7 @@ export function Contact() {
                   type="text"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   placeholder="What's this about?"
                   required
                 />
@@ -75,7 +75,7 @@ export function Contact() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   placeholder="Tell us more about your question or how you'd like to get involved..."
                   required
                 />
@@ -85,7 +85,7 @@ export function Contact() {
                 <button
                   type="button"
                   onClick={() => window.open('https://calendly.com/harelasaraf/sababa-nights', '_blank')}
-                  className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
+                  className="flex-1 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors shadow-lg"
                 >
                   Book a Session
                 </button>
@@ -98,7 +98,7 @@ export function Contact() {
                     );
                     window.location.href = `mailto:session@sababanights.com?subject=${subject}&body=${body}`;
                   }}
-                  className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
+                  className="flex-1 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors shadow-lg"
                 >
                   Email Us
                 </button>
@@ -161,8 +161,8 @@ export function Contact() {
                 at Sababa Nights Mostly Couples Dancing. Come as you are and leave with new friends, 
                 new choreography, and a big smile!
               </p>
-              <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-sm text-blue-800 font-medium">
+              <div className="bg-red-50 rounded-lg p-4">
+                <p className="text-sm text-red-800 font-medium">
                   💡 First-time visitors dance for FREE!
                 </p>
               </div>

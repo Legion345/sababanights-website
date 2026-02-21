@@ -16,7 +16,7 @@ interface IconProps {
  * Provides type safety and consistent styling
  *
  * @example
- * <Icon icon={faHome} size="lg" className="text-blue-600" />
+ * <Icon icon={faHome} size="lg" className="text-red-600" />
  */
 export function Icon({
   icon,

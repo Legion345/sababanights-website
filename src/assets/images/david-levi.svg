@@ -1,6 +1,0 @@
-<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="800" fill="#f093fb"/>
-  <circle cx="400" cy="320" r="100" fill="#ffffff" opacity="0.9"/>
-  <ellipse cx="400" cy="600" rx="180" ry="200" fill="#ffffff" opacity="0.9"/>
-  <text x="400" y="720" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle" font-weight="bold">David Levi</text>
-</svg>

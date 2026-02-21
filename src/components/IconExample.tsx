@@ -22,9 +22,9 @@ export function IconExample() {
       <section className="space-y-2">
         <h3 className="text-lg font-semibold text-gray-700">1. Direct FontAwesomeIcon Usage</h3>
         <div className="flex items-center gap-4">
-          <FontAwesomeIcon icon={faHome} className="text-blue-600" />
+          <FontAwesomeIcon icon={faHome} className="text-red-600" />
           <FontAwesomeIcon icon={faEnvelope} className="text-green-600" size="lg" />
-          <FontAwesomeIcon icon={faUsers} className="text-purple-600" size="2x" />
+          <FontAwesomeIcon icon={faUsers} className="text-red-800" size="2x" />
         </div>
       </section>
 
@@ -32,9 +32,9 @@ export function IconExample() {
       <section className="space-y-2">
         <h3 className="text-lg font-semibold text-gray-700">2. Custom Icon Component</h3>
         <div className="flex items-center gap-4">
-          <Icon icon={faHome} className="text-blue-600" />
+          <Icon icon={faHome} className="text-red-600" />
           <Icon icon={faEnvelope} size="lg" className="text-green-600" />
-          <Icon icon={faUsers} size="2x" className="text-purple-600" />
+          <Icon icon={faUsers} size="2x" className="text-red-800" />
         </div>
       </section>
 
@@ -42,11 +42,11 @@ export function IconExample() {
       <section className="space-y-2">
         <h3 className="text-lg font-semibold text-gray-700">3. Icons in Buttons</h3>
         <div className="flex gap-4">
-          <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+          <button className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">
             <Icon icon={faEnvelope} />
             <span>Contact Us</span>
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700">
+          <button className="flex items-center gap-2 px-4 py-2 bg-red-800 text-white rounded-md hover:bg-red-900">
             <Icon icon={faUsers} />
             <span>Join Team</span>
           </button>
@@ -57,7 +57,7 @@ export function IconExample() {
       <section className="space-y-2">
         <h3 className="text-lg font-semibold text-gray-700">4. Animated Icons</h3>
         <div className="flex items-center gap-4">
-          <Icon icon={faSpinner} spin className="text-blue-600" size="2x" />
+          <Icon icon={faSpinner} spin className="text-red-600" size="2x" />
           <Icon icon={faHeart} className="text-red-600 animate-pulse" size="2x" />
         </div>
       </section>
@@ -90,7 +90,7 @@ export function IconExample() {
           <div className="bg-white rounded-lg shadow-lg p-6 text-center">
             <p className="text-xs text-gray-500 mb-2">After (Font Awesome):</p>
             <div className="mb-2">
-              <Icon icon={faCalendarDays} size="3x" className="text-blue-600" />
+              <Icon icon={faCalendarDays} size="3x" className="text-red-600" />
             </div>
             <h3 className="font-semibold text-gray-900">Every Monday</h3>
             <p className="text-gray-600">8:00 PM - 12:00 AM</p>
@@ -103,11 +103,11 @@ export function IconExample() {
         <h3 className="text-lg font-semibold text-gray-700">Quick Reference</h3>
         <div className="bg-gray-100 p-4 rounded-md font-mono text-sm space-y-2">
           <p className="text-gray-800">// Import the icon</p>
-          <p className="text-blue-600">import &#123; faHome &#125; from '@fortawesome/free-solid-svg-icons';</p>
+          <p className="text-red-600">import &#123; faHome &#125; from '@fortawesome/free-solid-svg-icons';</p>
           <p className="text-gray-800 mt-2">// Use directly</p>
-          <p className="text-blue-600">&lt;FontAwesomeIcon icon=&#123;faHome&#125; /&gt;</p>
+          <p className="text-red-600">&lt;FontAwesomeIcon icon=&#123;faHome&#125; /&gt;</p>
           <p className="text-gray-800 mt-2">// Or use wrapper (recommended)</p>
-          <p className="text-blue-600">&lt;Icon icon=&#123;faHome&#125; size="lg" className="text-blue-600" /&gt;</p>
+          <p className="text-red-600">&lt;Icon icon=&#123;faHome&#125; size="lg" className="text-red-600" /&gt;</p>
         </div>
       </section>
     </div>

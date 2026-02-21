@@ -1,0 +1,33 @@
+# Block access to suspicious paths
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block requests to common spam/vulnerability paths
+    RewriteRule ^Members/.* - [F,L]
+    RewriteRule ^members/.* - [F,L]
+    RewriteRule ^wp-admin/.* - [F,L]
+    RewriteRule ^wordpress/.* - [F,L]
+    RewriteRule ^admin/.* - [F,L]
+    RewriteRule ^xmlrpc\.php - [F,L]
+    RewriteRule ^wp-login\.php - [F,L]
+</IfModule>
+
+# Block known bad bots by User-Agent
+<IfModule mod_setenvif.c>
+    SetEnvIfNoCase User-Agent "SemrushBot" bad_bot
+    SetEnvIfNoCase User-Agent "AhrefsBot" bad_bot
+    SetEnvIfNoCase User-Agent "MJ12bot" bad_bot
+    SetEnvIfNoCase User-Agent "DotBot" bad_bot
+    SetEnvIfNoCase User-Agent "^$" bad_bot
+
+    # Block bad bots
+    <RequireAll>
+        Require all granted
+        Require not env bad_bot
+    </RequireAll>
+</IfModule>
+
+# Return 403 Forbidden for blocked requests
+<FilesMatch "^(xmlrpc\.php|wp-login\.php)$">
+    Require all denied
+</FilesMatch>
