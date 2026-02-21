@@ -25,6 +25,22 @@ interface TeamMember {
   email?: string;
 }
 
+interface ProductColor {
+  name: string;
+  hexCode: string;
+}
+
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  images: string[];
+  sizes: string[];
+  colors: ProductColor[];
+  stripePriceId: string;
+}
+
 interface ContactMessage {
   id: string;
   name: string;
@@ -38,6 +54,7 @@ interface DataContextType {
   sessions: Session[];
   teamMembers: TeamMember[];
   contactMessages: ContactMessage[];
+  products: Product[];
   addContactMessage: (message: Omit<ContactMessage, "id" | "createdAt">) => void;
 }
 
@@ -107,6 +124,52 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
   const [contactMessages, setContactMessages] = useState<ContactMessage[]>([]);
 
+  const [products] = useState<Product[]>([
+    {
+      id: "tshirt-1",
+      name: "Sababa Nights Classic T-Shirt",
+      description: "Show your love for Israeli folk dancing with our premium made-to-order t-shirt. Features the Sababa Nights logo and is perfect for wearing to sessions or everyday. High-quality fabric, comfortable fit, and available in multiple colors and sizes. Each shirt is custom-made just for you!",
+      price: 2500, // $25.00
+      images: ["/placeholder-tshirt.jpg"],
+      sizes: ["S", "M", "L", "XL", "XXL"],
+      colors: [
+        { name: "Black", hexCode: "#000000" },
+        //{ name: "Purple", hexCode: "#7c3aed" },
+        //{ name: "White", hexCode: "#ffffff" },
+      ],
+      stripePriceId: "price_PLACEHOLDER", // Replace with actual Stripe Price ID
+    },
+    {
+      id: "tshirt-2",
+      name: "Sababa Nights Woman's T-Shirt",
+      description: "Show your love for Israeli folk dancing with our premium made-to-order t-shirt. Features the Sababa Nights logo and is perfect for wearing to sessions or everyday. High-quality fabric, comfortable fit, and available in multiple colors and sizes. Each shirt is custom-made just for you!",
+      price: 2500, // $25.00
+      images: ["/placeholder-tshirt.jpg"],
+      sizes: ["S", "M", "L", "XL", "XXL"],
+      colors: [
+        { name: "Black", hexCode: "#000000" },
+        //{ name: "Purple", hexCode: "#7c3aed" },
+        //{ name: "White", hexCode: "#ffffff" },
+      ],
+      stripePriceId: "price_PLACEHOLDER", // Replace with actual Stripe Price ID
+    },
+    {
+      id: "tshirt-3",
+      name: "Sababa Nights Woman's Tank",
+      description: "Show your love for Israeli folk dancing with our premium made-to-order t-shirt. Features the Sababa Nights logo and is perfect for wearing to sessions or everyday. High-quality fabric, comfortable fit, and available in multiple colors and sizes. Each shirt is custom-made just for you!",
+      price: 2500, // $25.00
+      images: ["/placeholder-tshirt.jpg"],
+      sizes: ["S", "M", "L", "XL", "XXL"],
+      colors: [
+        { name: "Black", hexCode: "#000000" },
+        //{ name: "Purple", hexCode: "#7c3aed" },
+        //{ name: "White", hexCode: "#ffffff" },
+      ],
+      stripePriceId: "price_PLACEHOLDER", // Replace with actual Stripe Price ID
+    },
+
+  ]);
+
   const addContactMessage = (messageData: Omit<ContactMessage, "id" | "createdAt">) => {
     const newMessage: ContactMessage = {
       ...messageData,
@@ -121,6 +184,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       sessions,
       teamMembers,
       contactMessages,
+      products,
       addContactMessage,
     }}>
       {children}

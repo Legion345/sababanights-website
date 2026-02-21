@@ -4,10 +4,10 @@ export function Sessions() {
   const { sessions } = useData();
 
   return (
-    <section id="sessions" className="bg-gradient-to-br from-purple-50 to-blue-50 py-16">
+    <section id="sessions" className="bg-gradient-to-br from-red-100 to-red-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-blue-900 mb-4">
+          <h1 className="text-4xl font-bold text-red-900 mb-4">
             Partner Dancing - Session/Teaching Schedule
           </h1>
           <p className="text-xl text-gray-600">
@@ -22,7 +22,7 @@ export function Sessions() {
           ) : (
             sessions.map((session) => (
               <div key={session.id} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-semibold text-blue-900 mb-2">{session.title}</h3>
+                <h3 className="text-xl font-semibold text-red-900 mb-2">{session.title}</h3>
                 <div className="space-y-2 text-gray-600">
                   <div className="flex items-center">
                     <span className="text-lg mr-2">📅</span>
@@ -42,7 +42,7 @@ export function Sessions() {
                   </div>
                   <div className="flex items-center">
                     <span className="text-lg mr-2">📊</span>
-                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm">
+                    <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-sm">
                       {session.level}
                     </span>
                   </div>
