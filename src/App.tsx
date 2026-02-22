@@ -37,10 +37,10 @@ export default function App() {
           <Navigation />
           {/* Under construction banner — sits below nav, animates to center pill on scroll */}
           <div
-            className={`fixed z-50 bg-yellow-400 text-yellow-900 font-semibold text-sm transition-all duration-500 ease-in-out left-1/2 -translate-x-1/2 ${
+            className={`fixed z-50 bg-yellow-400 text-yellow-900 font-semibold text-sm text-center transition-all duration-500 ease-in-out left-1/2 -translate-x-1/2 ${
               scrolled
-                ? "top-1/2 -translate-y-1/2 rounded-full px-6 py-2 shadow-xl whitespace-nowrap"
-                : "top-16 w-screen text-center py-2 px-4"
+                ? "top-1/2 -translate-y-1/2 rounded-full px-6 py-2 shadow-xl max-w-[90vw]"
+                : "top-16 w-screen py-2 px-4"
             }`}
           >
             🚧 This site is under construction — some features may not be available yet.
