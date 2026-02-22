@@ -43,7 +43,8 @@ export default function App() {
                 : "top-16 w-screen py-2 px-4"
             }`}
           >
-            🚧 This site is under construction — some features may not be available yet.
+            <span className="sm:hidden">🚧 Under Construction</span>
+            <span className="hidden sm:inline">🚧 This site is under construction — some features may not be available yet.</span>
           </div>
           <main className="flex-1">
             <Hero />
