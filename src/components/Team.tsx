@@ -8,7 +8,7 @@ export function Team() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-red-900 mb-4">
-            Meet Our Team 👥
+            Meet Our Team
           </h1>
           <p className="text-xl text-gray-600">
             The passionate people who make our dancing community special
